@@ -1,238 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sazzad Hossain | IT Support Specialist</title>
-  <meta name="description" content="Sazzad Hossain, IT support specialist in Ottawa. Active Directory, Microsoft 365, Azure, PowerShell and networking.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1f2933;
-      --muted: #5f6b7a;
-      --accent: #0b6bcb;
-      --accent-soft: #e6f0fb;
-      --border: #e3e7ec;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--accent); }
-    .container { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sazzad Hossain | IT Professional</title>
+<meta name="description" content="Sazzad Hossain, IT professional working across support, networking, cloud, automation and security, with three peer-reviewed papers in IEEE Xplore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rack: #0F2A44;
+    --rack-2: #173A5C;
+    --signal: #F0A93B;
+    --cable: #3FA796;
+    --ink: #1B2430;
+    --muted: #556275;
+    --paper: #F4F6F9;
+    --line: #D9DFE7;
+    --white: #FFFFFF;
+    --display: 'IBM Plex Sans Condensed', 'Arial Narrow', sans-serif;
+    --body: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--body); color: var(--ink); background: var(--paper); line-height: 1.6; font-size: 17px; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
 
-    nav {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid var(--border);
-    }
-    nav .container { display: flex; justify-content: space-between; align-items: center; height: 60px; }
-    nav .brand { font-weight: 700; text-decoration: none; color: var(--text); }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; }
-    nav ul a { text-decoration: none; color: var(--muted); font-weight: 500; }
-    nav ul a:hover { color: var(--accent); }
+  /* Top bar */
+  .topbar { background: var(--rack); color: #C9D6E4; font-size: 15px; }
+  .topbar .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  .topbar .mark { font-family: var(--display); font-weight: 600; font-size: 19px; color: var(--white); text-decoration: none; letter-spacing: 0.01em; }
+  .topbar nav { display: flex; gap: 26px; }
+  .topbar nav a { text-decoration: none; }
+  .topbar nav a:hover { color: var(--white); }
 
-    header { padding: 80px 0 60px; }
-    header h1 { font-size: 44px; margin: 0 0 8px; line-height: 1.15; }
-    header .role { font-size: 20px; color: var(--accent); font-weight: 600; margin: 0 0 16px; }
-    header .intro { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0 0 28px; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
-    .btn {
-      display: inline-block; padding: 10px 20px; border-radius: 8px;
-      text-decoration: none; font-weight: 600; border: 1px solid var(--accent);
-    }
-    .btn.primary { background: var(--accent); color: #fff; }
-    .btn.secondary { color: var(--accent); background: #fff; }
+  /* Hero */
+  .hero { background: var(--rack); color: var(--white); padding: 56px 0 72px; position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  .hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(48px, 7vw, 84px); line-height: 0.98; margin: 0 0 18px; letter-spacing: -0.01em; }
+  .hero .role { font-family: var(--display); font-weight: 500; font-size: clamp(20px, 2.4vw, 26px); color: var(--signal); margin: 0 0 22px; line-height: 1.3; }
+  .hero .intro { color: #C9D6E4; max-width: 34em; margin: 0 0 32px; font-size: 18px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: 16px; padding: 12px 22px; border-radius: 4px; }
+  .btn-main { background: var(--signal); color: var(--rack); }
+  .btn-main:hover { background: #F6BC5E; }
+  .btn-line { border: 1.5px solid #4C6D8F; color: var(--white); }
+  .btn-line:hover { border-color: var(--white); }
 
-    section { padding: 50px 0; border-top: 1px solid var(--border); }
-    section h2 { font-size: 28px; margin: 0 0 24px; }
+  .topo { width: 100%; height: auto; display: block; }
+  .topo .link { stroke: #4C6D8F; stroke-width: 1.6; fill: none; }
+  .topo .link.live { stroke: var(--cable); stroke-width: 2.2; stroke-dasharray: 260; stroke-dashoffset: 260; animation: draw 1.4s ease-out forwards; }
+  .topo .node rect { fill: var(--rack-2); stroke: #4C6D8F; stroke-width: 1.4; rx: 6; }
+  .topo .node text { fill: #E6EDF5; font-family: var(--body); font-size: 15px; font-weight: 500; }
+  .topo .core rect { fill: var(--signal); stroke: none; }
+  .topo .core text { fill: var(--rack); font-weight: 600; font-family: var(--display); font-size: 18px; }
+  .topo .led { fill: var(--cable); }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .topo .live:nth-of-type(2) { animation-delay: .15s; } .topo .live:nth-of-type(3) { animation-delay: .3s; }
+  .topo .live:nth-of-type(4) { animation-delay: .45s; } .topo .live:nth-of-type(5) { animation-delay: .6s; }
+  .topo .live:nth-of-type(6) { animation-delay: .75s; }
+  @media (prefers-reduced-motion: reduce) { .topo .link.live { animation: none; stroke-dashoffset: 0; } html { scroll-behavior: auto; } }
 
-    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
-    .skill-card h3 { margin: 0 0 10px; font-size: 16px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag { background: var(--accent-soft); color: var(--accent); font-size: 13px; padding: 3px 10px; border-radius: 999px; }
+  /* Facts strip */
+  .facts { background: var(--white); border-bottom: 1px solid var(--line); }
+  .facts .wrap { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .fact { padding: 26px 24px 26px 0; }
+  .fact + .fact { padding-left: 24px; border-left: 1px solid var(--line); }
+  .fact strong { display: block; font-family: var(--display); font-size: 30px; font-weight: 600; color: var(--rack); line-height: 1.1; }
+  .fact span { color: var(--muted); font-size: 15px; }
 
-    .job { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; margin-bottom: 16px; }
-    .job-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
-    .job h3 { margin: 0; font-size: 18px; }
-    .job .company { color: var(--muted); margin: 2px 0 10px; }
-    .job .date { color: var(--muted); font-size: 14px; white-space: nowrap; }
-    .job ul { margin: 0; padding-left: 20px; }
-    .job li { margin-bottom: 4px; }
+  /* Sections */
+  section { padding: 84px 0; }
+  .head { display: grid; grid-template-columns: 300px 1fr; gap: 48px; margin-bottom: 36px; align-items: end; }
+  .head h2 { font-family: var(--display); font-weight: 700; font-size: 42px; line-height: 1.05; margin: 0; color: var(--rack); }
+  .head p { margin: 0; color: var(--muted); max-width: 36em; }
 
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .project { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; }
-    .project h3 { margin: 0 0 8px; font-size: 17px; }
-    .project .tags { margin-bottom: 10px; }
-    .project p { margin: 0 0 14px; color: var(--muted); flex: 1; }
+  /* Skills as proof rows */
+  .proof { border-top: 2px solid var(--rack); }
+  .row { display: grid; grid-template-columns: 300px 1fr 280px; gap: 48px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .row h3 { margin: 0; font-family: var(--display); font-size: 22px; font-weight: 600; color: var(--rack); line-height: 1.25; }
+  .tools { margin: 0; color: var(--ink); }
+  .where { margin: 0; font-size: 15px; color: var(--muted); padding-left: 14px; border-left: 3px solid var(--cable); }
+  .where a { color: var(--rack); font-weight: 500; text-decoration-color: var(--cable); text-underline-offset: 3px; }
 
-.skill-card { display: flex; flex-direction: column; }
-    .skill-card .tags { flex: 1; align-content: flex-start; align-items: flex-start; }
-    .used { margin: 12px 0 0; font-size: 13px; color: var(--accent); font-weight: 500; }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-    .badge { background: var(--text); color: #fff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 6px; }
+  /* Projects */
+  #projects { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; }
+  .proj { padding: 26px 0 28px; border-top: 1px solid var(--line); }
+  .proj h3 { margin: 0 0 10px; font-family: var(--display); font-size: 24px; font-weight: 600; line-height: 1.2; color: var(--rack); }
+  .proj p { margin: 0 0 14px; max-width: 34em; }
+  .stack { margin: 0; color: var(--muted); font-size: 15px; }
+  .stack b { color: var(--ink); font-weight: 500; }
+  .proj a.more { font-weight: 600; color: var(--rack); text-decoration-color: var(--signal); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
-    .edu p { margin: 0 0 6px; }
+  /* Publications */
+  .pubs { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--rack); }
+  .pub { display: grid; grid-template-columns: 300px 1fr; gap: 48px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+  .year { font-family: var(--display); font-weight: 700; font-size: 56px; line-height: 1; color: #AEBBCB; }
+  .pub .venue { margin: 10px 0 0; font-size: 15px; color: var(--muted); }
+  .pub h3 { margin: 0 0 10px; font-family: var(--display); font-size: 24px; font-weight: 600; line-height: 1.25; }
+  .pub h3 a { color: var(--rack); text-decoration-color: var(--signal); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  .pub p { margin: 0 0 12px; max-width: 40em; }
+  .authors { font-size: 15px; color: var(--muted); }
+  .authors b { color: var(--ink); font-weight: 600; }
 
-    .contact-list { list-style: none; padding: 0; margin: 0; }
-    .contact-list li { margin-bottom: 8px; font-size: 17px; }
+  /* Footer */
+  footer { background: var(--rack); color: #C9D6E4; padding: 72px 0 40px; }
+  footer .wrap { display: grid; grid-template-columns: 300px 1fr 1fr; gap: 48px; }
+  footer h2 { font-family: var(--display); font-weight: 700; font-size: 42px; line-height: 1.05; margin: 0; color: var(--white); }
+  footer h3 { margin: 0 0 10px; color: var(--white); font-size: 17px; font-weight: 600; }
+  footer p { margin: 0 0 6px; }
+  footer a { color: var(--white); text-decoration-color: var(--signal); text-underline-offset: 3px; }
+  .copy { grid-column: 1 / -1; border-top: 1px solid #2B4A6B; margin-top: 32px; padding-top: 20px; font-size: 14px; color: #8EA3BA; }
 
-    footer { padding: 30px 0; text-align: center; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
-
-    @media (max-width: 600px) {
-      nav ul { gap: 14px; font-size: 14px; }
-      header { padding: 50px 0 40px; }
-      header h1 { font-size: 34px; }
-    }
-  </style>
+  @media (max-width: 900px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .topo { max-width: 520px; }
+    .head, .row, .pub, footer .wrap { grid-template-columns: 1fr; gap: 12px; }
+    .proj-grid { grid-template-columns: 1fr; }
+    .where { margin-top: 4px; }
+    .year { font-size: 40px; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .topbar nav { gap: 16px; font-size: 14px; }
+    .topbar .mark { display: none; }
+    .topbar .wrap { justify-content: flex-start; }
+    .facts .wrap { grid-template-columns: 1fr; }
+    .fact + .fact { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+    section { padding: 60px 0; }
+    .head h2, footer h2 { font-size: 34px; }
+  }
+</style>
 </head>
 <body>
 
-<nav>
-  <div class="container">
-    <a class="brand" href="#">Sazzad Hossain</a>
-    <ul>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header>
-  <div class="container">
-    <h1>Sazzad Hossain</h1>
-    <p class="role">IT Support Specialist · Ottawa, ON</p>
-    <p class="intro">
-      IT professional with hands-on support experience, team leadership, and published research in
-      networking, IoT and machine learning. I've automated Windows patching with PowerShell and WSUS,
-      built a segmented VLAN network for a medical clinic, and written a Python tool that detects ARP and DNS spoofing. I hold a Master of Information Technology (Network
-      Technology) from Carleton University and have three peer-reviewed papers in IEEE Xplore.
-    </p>
-    <div class="buttons">
-      <a class="btn primary" href="#contact">Get in touch</a>
-      <a class="btn secondary" href="https://github.com/sazzadhossaina">GitHub</a>
-    </div>
+<header class="topbar">
+  <div class="wrap">
+    <a class="mark" href="#top">Sazzad Hossain</a>
+    <nav aria-label="Main">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Sazzad Hossain</h1>
+      <p class="role">IT professional working across support, networking, cloud, automation and security</p>
+      <p class="intro">I keep people and systems running. I've supported users for multiple client organizations, I lead a team of about 18, and I've published research on network security, IoT and machine learning.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="#projects">See my projects</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/sazzadhossain125/">Connect on LinkedIn</a>
+      </div>
+    </div>
+
+    <svg class="topo" viewBox="0 0 520 420" role="img" aria-labelledby="topo-title">
+      <title id="topo-title">Network map linking six skill areas: IT support, networking, security, cloud, automation and research</title>
+      <path class="link" d="M260 210 L100 70"/>
+      <path class="link live" d="M260 210 L100 70"/>
+      <path class="link live" d="M260 210 L420 70"/>
+      <path class="link live" d="M260 210 L60 210"/>
+      <path class="link live" d="M260 210 L460 210"/>
+      <path class="link live" d="M260 210 L100 350"/>
+      <path class="link live" d="M260 210 L420 350"/>
+      <path class="link" d="M100 70 L420 70" stroke-dasharray="4 6"/>
+      <path class="link" d="M100 350 L420 350" stroke-dasharray="4 6"/>
+
+      <g class="node"><rect x="30" y="48" width="140" height="44"/><circle class="led" cx="48" cy="70" r="4"/><text x="60" y="75">IT support</text></g>
+      <g class="node"><rect x="350" y="48" width="140" height="44"/><circle class="led" cx="368" cy="70" r="4"/><text x="380" y="75">Networking</text></g>
+      <g class="node"><rect x="0" y="188" width="120" height="44"/><circle class="led" cx="18" cy="210" r="4"/><text x="30" y="215">Security</text></g>
+      <g class="node"><rect x="400" y="188" width="120" height="44"/><circle class="led" cx="418" cy="210" r="4"/><text x="430" y="215">Cloud</text></g>
+      <g class="node"><rect x="25" y="328" width="150" height="44"/><circle class="led" cx="43" cy="350" r="4"/><text x="55" y="355">Automation</text></g>
+      <g class="node"><rect x="350" y="328" width="140" height="44"/><circle class="led" cx="368" cy="350" r="4"/><text x="380" y="355">Research</text></g>
+      <g class="node core"><rect x="195" y="182" width="130" height="56"/><text x="260" y="216" text-anchor="middle">Sazzad</text></g>
+    </svg>
+  </div>
+</div>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><strong>3 papers</strong><span>Peer-reviewed, in IEEE Xplore</span></div>
+    <div class="fact"><strong>50+ endpoints</strong><span>Patched automatically with PowerShell and WSUS</span></div>
+    <div class="fact"><strong>Team of 18</strong><span>Supervised, trained and kept on target</span></div>
+  </div>
+</div>
+
 <section id="skills">
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill-card">
-        <h3>IT support &amp; endpoint management</h3>
-        <div class="tags"><span class="tag">Active Directory</span><span class="tag">Microsoft 365</span><span class="tag">MFA</span><span class="tag">Group Policy</span><span class="tag">WSUS</span><span class="tag">Patch management</span><span class="tag">Ticketing</span><span class="tag">Remote support</span></div>
-        <p class="used">Used in: NetConnect internship · Patch automation project</p>
+  <div class="wrap">
+    <div class="head">
+      <h2>Skills, with proof</h2>
+      <p>Each skill area points to the work where I actually used it.</p>
+    </div>
+    <div class="proof">
+      <div class="row">
+        <h3>IT support and endpoints</h3>
+        <p class="tools">Active Directory, Microsoft 365, MFA, Group Policy, WSUS, patch management, ticketing, remote support</p>
+        <p class="where">NetConnect IT Solutions internship, <a href="#patching">Windows patch automation</a></p>
       </div>
-      <div class="skill-card">
-        <h3>Networking &amp; security</h3>
-        <div class="tags"><span class="tag">TCP/IP</span><span class="tag">VLANs</span><span class="tag">Firewall rules</span><span class="tag">TP-Link Omada</span><span class="tag">ARP/DNS spoof detection</span></div>
-        <p class="used">Used in: Clinic network · Home Internet Security System</p>
+      <div class="row">
+        <h3>Networking and security</h3>
+        <p class="tools">TCP/IP, VLANs, firewall rules, Wi-Fi with TP-Link Omada, ARP and DNS spoof detection</p>
+        <p class="where"><a href="#clinic">Clinic network</a>, <a href="#spoof">Home Internet Security System</a></p>
       </div>
-      <div class="skill-card">
-        <h3>IoT &amp; research networking</h3>
-        <div class="tags"><span class="tag">IPv6</span><span class="tag">RPL</span><span class="tag">IEEE 802.15.4 / 6TiSCH</span><span class="tag">IoT sensors</span></div>
-        <p class="used">Used in: IEEE DRCN 2024 · ICREST 2019</p>
+      <div class="row">
+        <h3>IoT and research networking</h3>
+        <p class="tools">IPv6, RPL, IEEE 802.15.4, TSCH and 6TiSCH, IoT sensors</p>
+        <p class="where"><a href="#drcn">IEEE DRCN 2024</a>, <a href="#icrest">ICREST 2019</a></p>
       </div>
-      <div class="skill-card">
-        <h3>Programming &amp; automation</h3>
-        <div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">Bash</span><span class="tag">PowerShell</span><span class="tag">Ansible</span><span class="tag">Contiki-NG</span></div>
-        <p class="used">Used in: Patch automation · Spoof detector · 6TiSCH research · 5G project</p>
+      <div class="row">
+        <h3>Programming and automation</h3>
+        <p class="tools">PowerShell, Python, C, Bash, Ansible, Contiki-NG</p>
+        <p class="where"><a href="#patching">Patch automation</a>, <a href="#spoof">spoof detector</a>, <a href="#drcn">6TiSCH research</a>, <a href="#fiveg">5G project</a></p>
       </div>
-      <div class="skill-card">
-        <h3>Machine learning &amp; data</h3>
-        <div class="tags"><span class="tag">SVM</span><span class="tag">Random Forest</span><span class="tag">XGBoost</span><span class="tag">Logistic regression</span><span class="tag">SQL</span><span class="tag">Excel</span></div>
-        <p class="used">Used in: IEEE TENCON 2019</p>
+      <div class="row">
+        <h3>Machine learning and data</h3>
+        <p class="tools">SVM, Random Forest, XGBoost, logistic regression, SQL, Excel</p>
+        <p class="where"><a href="#tencon">IEEE TENCON 2019</a></p>
       </div>
-      <div class="skill-card">
-        <h3>Cloud &amp; virtualization</h3>
-        <div class="tags"><span class="tag">Azure</span><span class="tag">VMware</span><span class="tag">Hyper-V</span></div>
-        <p class="used">Used in: Carleton research · MGH Group</p>
+      <div class="row">
+        <h3>Cloud and virtualization</h3>
+        <p class="tools">Microsoft Azure, VMware, Hyper-V</p>
+        <p class="where">Carleton graduate research, MGH Group</p>
       </div>
-      <div class="skill-card">
+      <div class="row">
         <h3>Leadership</h3>
-        <div class="tags"><span class="tag">Team of about 18</span><span class="tag">Staff training</span><span class="tag">Meeting targets</span></div>
-        <p class="used">Used in: Supervisor, Staples Canada</p>
+        <p class="tools">Team supervision for about 18 people, staff training, meeting targets</p>
+        <p class="where">Supervisor at Staples Canada</p>
       </div>
     </div>
   </div>
 </section>
 
 <section id="projects">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
+  <div class="wrap">
+    <div class="head">
+      <h2>Projects</h2>
+      <p>Hands-on work in endpoint management, network design, security and automation.</p>
+    </div>
+    <div class="proj-grid">
+      <article class="proj" id="patching">
         <h3>Automated Patch Management for Windows Endpoints</h3>
         <p>Built a PowerShell-based patch automation system for 50+ Windows workstations, integrated with Group Policy and WSUS, scheduled with Task Scheduler and fully logged.</p>
-        <div class="tags"><span class="tag">PowerShell</span><span class="tag">WSUS</span><span class="tag">Group Policy</span><span class="tag">Task Scheduler</span></div>
-      </div>
-      <div class="project">
-        <h3>Wi-Fi Network Setup &amp; Segmentation for Clinic Environment</h3>
+        <p class="stack"><b>Built with</b> PowerShell, WSUS, Group Policy, Task Scheduler</p>
+      </article>
+      <article class="proj" id="clinic">
+        <h3>Wi-Fi Network Setup and Segmentation for a Clinic</h3>
         <p>Designed and deployed a multi-floor medical office network with separate staff and guest VLANs on TP-Link Omada, including firewall rules and guest bandwidth limits.</p>
-        <div class="tags"><span class="tag">VLANs</span><span class="tag">TP-Link Omada</span><span class="tag">Firewall rules</span><span class="tag">Wi-Fi</span></div>
-      </div>
-      <div class="project">
+        <p class="stack"><b>Built with</b> VLANs, TP-Link Omada, firewall rules, Wi-Fi</p>
+      </article>
+      <article class="proj" id="spoof">
         <h3>Home Internet Security System</h3>
         <p>A Python-based ARP and DNS spoof detector that protects home Wi-Fi users from cyberattacks.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">ARP</span><span class="tag">DNS</span><span class="tag">Network security</span></div>
-      </div>
-      <div class="project">
-        <h3>On the Impact of the RPL Decreased Rank Attack on 6TiSCH Networks</h3>
-        <p>An impact and feasibility study of the RPL decreased rank attack on 6TiSCH networks, which use IEEE 802.15.4-2015 TSCH with RPL for multi-hop IPv6 routing. Built on Contiki-NG in C, with Python and Bash scripting. Published at IEEE DRCN 2024, Montreal.</p>
-        <span class="tag" style="align-self:flex-start;margin-bottom:10px">Published · IEEE DRCN 2024</span>
-        <a href="https://ieeexplore.ieee.org/document/10539163">Read on IEEE Xplore →</a>
-      </div>
-      <div class="project">
-        <h3>Application of Machine Learning in Credit Risk Assessment: A Prelude to Smart Banking</h3>
-        <p>Thesis project: a machine learning system that predicts whether a person can repay a loan, which helps lenders decide whether to approve it. Accepted at TENCON 2019, an international IEEE Region 10 conference.</p>
-        <span class="tag" style="align-self:flex-start;margin-bottom:10px">Published · IEEE TENCON 2019</span>
-        <a href="https://ieeexplore.ieee.org/document/8929527">Read on IEEE Xplore →</a>
-      </div>
-      <div class="project">
-        <h3>IoT Based Patient Monitoring System Using ECG Sensor</h3>
-        <p>Continuously monitors a patient's condition and saves the readings to the cloud for remote viewing. It responds automatically to the readings and includes an emergency button and an on-request live camera stream through a web page built for the project.</p>
-        <span class="tag" style="align-self:flex-start;margin-bottom:10px">Published · IEEE ICREST 2019</span>
-        <a href="https://ieeexplore.ieee.org/document/8644065">Read on IEEE Xplore →</a>
-      </div>
-      <div class="project">
-        <h3>Automated 5G Network Deployment with Ansible</h3>
-        <p>Graduate project at Carleton University: automated the deployment of a 5G network with Ansible and analyzed its performance.</p>
-        <a href="https://github.com/MahaAli18/Automated-5G-Network-Deployment-Using-Ansible-and-Performance-Analysis">View on GitHub →</a>
-      </div>
+        <p class="stack"><b>Built with</b> Python, ARP, DNS</p>
+      </article>
+      <article class="proj" id="fiveg">
+        <h3>Automated 5G Network Deployment Using Ansible</h3>
+        <p>Graduate project at Carleton University. We automated the deployment of a 5G network with Ansible and analyzed its performance.</p>
+        <p class="stack"><b>Built with</b> Ansible, 5G core, performance analysis</p>
+        <p><a class="more" href="https://github.com/MahaAli18/Automated-5G-Network-Deployment-Using-Ansible-and-Performance-Analysis">View the code on GitHub</a></p>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="education" class="edu">
-  <div class="container">
-    <h2>Education</h2>
-    <p><strong>Master of Information Technology (Network Technology)</strong></p>
-    <p>Carleton University, Ottawa</p>
+<section id="research">
+  <div class="wrap">
+    <div class="head">
+      <h2>Published research</h2>
+      <p>Three peer-reviewed conference papers, newest first.</p>
+    </div>
+    <ol class="pubs">
+      <li class="pub" id="drcn">
+        <div><div class="year">2024</div><p class="venue">IEEE DRCN 2024, Montreal</p></div>
+        <div>
+          <h3><a href="https://ieeexplore.ieee.org/document/10539163">On the Impact of the RPL Decreased Rank Attack on 6TiSCH Networks</a></h3>
+          <p>Studied how the RPL decreased rank attack disrupts 6TiSCH networks, which run on the TSCH mode of IEEE 802.15.4-2015 and use RPL for multi-hop IPv6 routing. Implemented on Contiki-NG in C, with Python and Bash scripting.</p>
+          <p class="authors">M. Mahyoub, <b>S. Hossain</b> and A. Matrawy. Carleton University, Next Generation Networks Lab.</p>
+        </div>
+      </li>
+      <li class="pub" id="tencon">
+        <div><div class="year">2019</div><p class="venue">IEEE TENCON 2019, Kochi</p></div>
+        <div>
+          <h3><a href="https://ieeexplore.ieee.org/document/8929527">Application of Machine Learning in Credit Risk Assessment: A Prelude to Smart Banking</a></h3>
+          <p>A machine learning system that predicts whether a person can repay a loan, which helps lenders decide whether to approve it.</p>
+          <p class="authors">S. Z. H. Shoumo, M. I. M. Dhruba, <b>S. Hossain</b>, N. H. Ghani, H. Arif and S. Islam.</p>
+        </div>
+      </li>
+      <li class="pub" id="icrest">
+        <div><div class="year">2019</div><p class="venue">ICREST 2019, Dhaka</p></div>
+        <div>
+          <h3><a href="https://ieeexplore.ieee.org/document/8644065">IoT Based Patient Monitoring System Using ECG Sensor</a></h3>
+          <p>Continuously monitors a patient's condition and saves the readings to a cloud server for remote viewing, with an emergency push button and an on-request live camera stream.</p>
+          <p class="authors">A. Rahman, T. Rahman, N. H. Ghani, <b>S. Hossain</b> and J. Uddin.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
+</main>
 
-<section id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-    <ul class="contact-list">
-      <li>💼 <a href="https://www.linkedin.com/in/sazzadhossain125/">LinkedIn</a></li>
-      <li>💻 <a href="https://github.com/sazzadhossaina">github.com/sazzadhossaina</a></li>
-    </ul>
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <div>
+      <h3>Get in touch</h3>
+      <p><a href="https://www.linkedin.com/in/sazzadhossain125/">LinkedIn</a></p>
+      <p><a href="https://github.com/sazzadhossaina">GitHub</a></p>
+    </div>
+    <div>
+      <h3>Education</h3>
+      <p>Master of Information Technology, Network Technology</p>
+      <p>Carleton University</p>
+      <p style="margin-top:14px">Currently studying for AZ-900 and CompTIA A+</p>
+    </div>
+    <p class="copy">© <span id="year">2026</span> Sazzad Hossain</p>
   </div>
-</section>
-
-<footer>
-  © <span id="year"></span> Sazzad Hossain
 </footer>
 
 <script>
